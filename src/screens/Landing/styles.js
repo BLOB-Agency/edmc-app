@@ -9,29 +9,27 @@ const styles = StyleSheet.create({
     },
     linearGradient: {
         flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
+        gap: 24,
+        padding: 24,
+        justifyContent: 'flex-end',
+        paddingBottom: 72
     },
     heroText: {
-        fontSize: 24,
-        color: 'white',
-        marginBottom: 20,
+        fontFamily: 'Cereal-Medium',
+        fontSize: 36,
+        color: '#FFFFFF',
+        letterSpacing: -1.1,
+        lineHeight: 44,
     },
-    button: {
-        backgroundColor: 'blue',
-        padding: 10,
-        borderRadius: 5,
-        marginBottom: 10,
-    },
-    buttonText: {
-        color: 'white',
-    },
-    socialButton: {
-        // Similar to button but with additional styles for social media
-    },
-    socialButtonText: {
-        // Similar to buttonText
-    },
+    socialText: {
+        opacity: 0.35,
+        fontFamily: 'Cereal-Book',
+        fontSize: 14,
+        color: '#FFFFFF',
+        letterSpacing: -0.37,
+        textTransform: 'uppercase',
+        textAlign: 'center',
+    }
 });
 
 export default styles;

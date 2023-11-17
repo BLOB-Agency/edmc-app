@@ -8,7 +8,7 @@ const Stack = createNativeStackNavigator();
 const AppNavigator = () => {
     return (
         <Stack.Navigator>
-            <Stack.Screen name="Landing" component={Landing} />
+            <Stack.Screen name="Landing" component={Landing} options={{ headerShown: false }} />
         </Stack.Navigator>
     );
 };
