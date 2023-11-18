@@ -2,6 +2,9 @@ import 'react-native-gesture-handler';
 import AppNavigator from "./src/navigation/AppNavigator";
 import {NavigationContainer} from "@react-navigation/native";
 import {useFonts} from "expo-font";
+import {Provider} from "react-redux";
+import store from "./src/store";
+
 export default function () {
     const [fontsLoaded] = useFonts({
         'Cereal-Medium': require('./src/assets/fonts/AirbnbCereal-Medium.ttf'),
@@ -17,8 +20,10 @@ export default function () {
     }
 
     return (
-        <NavigationContainer>
-            <AppNavigator/>
-        </NavigationContainer>
+       <Provider store={store}>
+           <NavigationContainer>
+               <AppNavigator/>
+           </NavigationContainer>
+       </Provider>
     );
 }
