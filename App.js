@@ -4,6 +4,7 @@ import {NavigationContainer} from "@react-navigation/native";
 import {useFonts} from "expo-font";
 import {Provider} from "react-redux";
 import store from "./src/store";
+import {UserProvider} from "./src/context/UserContext";
 
 export default function () {
     const [fontsLoaded] = useFonts({
@@ -21,9 +22,11 @@ export default function () {
 
     return (
        <Provider store={store}>
-           <NavigationContainer>
-               <AppNavigator/>
-           </NavigationContainer>
+           <UserProvider>
+               <NavigationContainer>
+                   <AppNavigator/>
+               </NavigationContainer>
+           </UserProvider>
        </Provider>
     );
 }

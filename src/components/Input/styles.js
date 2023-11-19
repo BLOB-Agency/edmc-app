@@ -32,6 +32,17 @@ const styles = StyleSheet.create({
         color: '#FFFFFF',
         fontFamily: 'Cereal-Book',
     },
+    inputError: {
+        borderColor: 'red',
+        borderWidth: 1,
+    },
+    errorText: {
+        fontFamily: 'Gordita-Medium',
+        color: 'red',
+        fontSize: 12,
+        marginTop: 5,
+        marginLeft: 12,
+    },
 });
 
 

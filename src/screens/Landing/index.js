@@ -7,6 +7,13 @@ import SecondaryButton from "../../components/SecondaryButton";
 import AppleLogo from "../../assets/images/apple_logo_white.png";
 import SocialButton from "../../components/SocialButton";
 export default function({navigation}) {
+    const goToRegistration = () => {
+        navigation.navigate('Registration');
+    }
+
+    const goToLogin = () => {
+        navigation.navigate('Login');
+    }
     return (
         <>
             <StatusBar barStyle="light-content" />
@@ -18,8 +25,8 @@ export default function({navigation}) {
                     style={styles.linearGradient}
                 >
                     <Text style={styles.heroText}>Lorem Ipsum{"\n"}Dolor Sit Amet</Text>
-                    <SecondaryButton title={"Log In!"}></SecondaryButton>
-                    <PrimaryButton onPress={() => navigation.navigate('Registration')} title={"Sign Up!"}></PrimaryButton>
+                    <SecondaryButton onPress={goToLogin} title={"Log In!"}></SecondaryButton>
+                    <PrimaryButton onPress={goToRegistration} title={"Sign Up!"}></PrimaryButton>
 
                     <Text style={styles.socialText}>Or sign in with</Text>
 

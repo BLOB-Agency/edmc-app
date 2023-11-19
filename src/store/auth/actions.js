@@ -1,4 +1,4 @@
-import {REGISTER_FAILURE, REGISTER_SUCCESS} from "./types";
+import {LOGIN_FAILURE, LOGIN_SUCCESS, REGISTER_FAILURE, REGISTER_SUCCESS} from "./types";
 import authService from "../../services/authService";
 
 export const register = (userData) => async dispatch => {
@@ -10,3 +10,13 @@ export const register = (userData) => async dispatch => {
         dispatch({ type: REGISTER_FAILURE, payload: error.message });
     }
 };
+
+export const login = (userData) => async dispatch => {
+    try {
+        const response = await authService.login(userData);
+
+        dispatch({ type: LOGIN_SUCCESS, payload: response.user });
+    } catch (error) {
+        dispatch({ type: LOGIN_FAILURE, payload: error.message });
+    }
+}

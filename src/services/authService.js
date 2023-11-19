@@ -13,4 +13,16 @@ export default {
             throw error;
         }
     },
+
+    login: async (userData) => {
+        try {
+            const response = await apiClient.login(userData);
+
+            await tokenStore.saveToken(response.token)
+
+            return response.data;
+        } catch (error) {
+            throw error;
+        }
+    }
 }
